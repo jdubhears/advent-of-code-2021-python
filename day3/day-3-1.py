@@ -25,6 +25,9 @@ gamma_dec = int(gamma_rate, 2)
 print('Gamma rate: ', gamma_dec)
 
 epsilon_rate = ''
+#epsilon rate is twos complement of gamma rate
+#below is a hacky way to get that twos complement since
+#python doesn't seem to have bitwise ops that I'm aware of
 for char in gamma_rate:
     if char == '1':
         epsilon_rate = epsilon_rate + '0'
